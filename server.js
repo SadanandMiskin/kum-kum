@@ -9,7 +9,7 @@ const LocalStrategy = require('passport-local').Strategy
 
 
 const app = express()
-const port =process.env.PORT || 4000;
+const port = 3000;
 app.use(express.static('frontend'))
 app.use(bodyParser.urlencoded({extended:false}))
 
@@ -230,6 +230,6 @@ app.get('/abhi2002', async (req,res)=>{
 })
 
 connectToMongoDB()
-app.listen(port  ,(req,res)=>{
+app.listen( port || process.env.port  ,(req,res)=>{
     console.log(`server listening at ${port}`)
 })

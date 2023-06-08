@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Great+Vibes&family=Inter:wght@700&family=Kaushan+Script&family=Nunito:wght@800;900&family=Oswald:wght@700&family=Prompt:wght@800&display=swap');
+:root{
+    background-color: beige;
+}
+
+ .logo{
+    font-family: arizonia;
+    font-weight: 400;
+    font-size: 30px;
+
+
+}
+li,a{
+    font-size: 18px;
+    text-decoration: none;
+    color: brown;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10%;
+    background-color: aliceblue;
+    border-radius: 1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    
+}
+
+.logo{
+    cursor: pointer;
+}
+.links{
+    list-style: none;
+
+}
+
+.links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.links li a {
+    transition: all 0.5s ease 0s;
+}

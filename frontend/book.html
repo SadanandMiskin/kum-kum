@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Great+Vibes&family=Inter:wght@700&family=Kaushan+Script&family=Nunito:wght@800;900&family=Oswald:wght@700&family=Prompt:wght@800&display=swap');
+       body {
+  background: url("back.jpg");
+}
+
+section {
+  background-color: rgb(255, 255, 255);
+  display: block;
+  padding: 30px;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 150px;
+  
+  padding-top: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+ 
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #7b5932;
+}
+
+/* Optional: Increase the font size */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+button[type="submit"] {
+  font-size: 16px;
+}
+p{
+    font-family: arizonia;
+    margin-left: 90px;
+    font-size: 33px;
+}
+.txt{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+    </style>
+</head>
+<body>
+<section>
+    <p>Kum Kum</p>
+    <form action="/" method="post" class="txt">
+        <label for="name">Name:</label>
+        <input type="text" name="name">
+        <label for="number">Phone number:</label>
+        <input type="number" name="number">
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+        <label for="dateInput">Select a date:</label>
+        <input type="date" id="dateInput" name="dateInput" required>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+</body>
+</html>

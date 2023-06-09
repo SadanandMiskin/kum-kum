@@ -49,7 +49,7 @@
 <header>
   <h3>Admin Login</h3>
  
-  <a href="/abhi2002reviews"> <button>reviews</button></a>
+  <a href="/ADMIN_REVIEWS"> <button>reviews</button></a>
   <a href="/admin"><button>Logout</button></a>
 </header>
 <body>
@@ -60,7 +60,7 @@
       <p>Email:    <b><%= p.email %></b></p>
       <p>Phone:    <b><%= p.phone %></b></p>
       <p>Date:    <b><%= (p.date).toDateString() %></b></p>
-      <form action="/abhi2002/<%= p._id %>" method="post">
+      <form action="/ADMIN/<%= p._id %>" method="post">
         <button type="submit">Delete</button>
       </form>
     </div>

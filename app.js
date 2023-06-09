@@ -66,7 +66,7 @@ app.get('/feedback',(req,res)=>{
   res.sendFile(__dirname + '/frontend/feedback.html')
 })
 
-app.get('/abhi2002reviews',async (req,res)=>{
+app.get('/ADMIN_ROUTE',async (req,res)=>{
   try{
     var feeds = await feed.find({})
     var feedlist = [...feeds]
@@ -77,11 +77,11 @@ app.get('/abhi2002reviews',async (req,res)=>{
     console.log(err)
   }
 })
-app.post('/abhi2002reviews/:id',async(req,res)=>{
+app.post('/ADMIN_ROUTE/:id',async(req,res)=>{
   try{
     let u = req.params.id
     await feed.findByIdAndDelete(u)
-    res.redirect('/abhi2002reviews')
+    res.redirect('/ADMIN_ROUTE')
   }
   catch(err){
     console.log(err)
@@ -137,7 +137,7 @@ app.post('/', async (req, res) => {
   
       // Prepare the email content
       let mailOptions = {
-        from: '"Kum Kum" <kumkumparlour42@gmail.com>',
+        from: '"name"<Your_email>',
         to: email,
         subject: 'Registration Successful',
         text: 'Hello! Thank you for registering', // Plain text body
@@ -167,8 +167,8 @@ app.post('/', async (req, res) => {
       }
 
       let mailOptions1 = {
-        from: '"Kum Kum" <kumkumparlour42@gmail.com>',
-        to: 'miskinsadanand@gmail.com',
+        from: '"name" <your_email>',
+        to: 'email',
         subject: 'New Registration',
         text: `New registration, ${name}`, // Plain text body
         html: ` Name:  ${name} <br>
@@ -203,11 +203,11 @@ app.post('/admin',(req,res)=>{
 })
 
 
-app.post('/abhi2002/:id',async (req,res) =>{
+app.post('/ADMIN_ROUTE/:id',async (req,res) =>{
     let userId = req.params.id
     try{
      await user.findByIdAndDelete(userId)
-      res.redirect('/abhi2002')
+      res.redirect('/ADMIN_ROUTE')
     }catch(err){
       console.error(err)
     }
@@ -217,7 +217,7 @@ app.post('/abhi2002/:id',async (req,res) =>{
 
 
 
-app.get('/abhi2002', async (req,res)=>{
+app.get('/ADMIN_ROUTE', async (req,res)=>{
  try{
   var users = await user.find({})
   var userList = [...users]

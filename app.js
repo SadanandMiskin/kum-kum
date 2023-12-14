@@ -126,7 +126,7 @@ app.post('/', async (req, res) => {
         port: 465, // Replace with your SMTP server port
         secure: true, // Set to true if your SMTP server requires SSL/TLS
         auth: {
-            type: ' OAuth2',
+            type: ' OAuth2', // Aurthorization type
           user: process.env.email, // Replace with your email address
           pass: process.env.pass, // Replace with your email password
         },

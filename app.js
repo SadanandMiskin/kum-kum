@@ -112,7 +112,7 @@ app.post('/', async (req, res) => {
       const message = req.body
       console.log(typeof message)
 
-      const token = "kumkumsoudi"
+      const token = process.env.token
        const a = await axios.post('https://surf-tasteful-swing.glitch.me', message , {headers:{
         Authorization: `Bearer ${token}`
     }}  )

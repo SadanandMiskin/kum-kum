@@ -111,7 +111,11 @@ app.post('/', async (req, res) => {
 
       const message = req.body
       console.log(typeof message)
-       const a = await axios.post('https://surf-tasteful-swing.glitch.me', message )
+
+      const token = "kumkumsoudi"
+       const a = await axios.post('https://surf-tasteful-swing.glitch.me', message , {headers:{
+        Authorization: `Bearer ${token}`
+    }}  )
        
        if(a) return res.sendFile(__dirname + '/frontend/success.html');
        
